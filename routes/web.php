@@ -15,6 +15,26 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/category', function () {
+    return view('category');
+});
+
+Route::get('/FUNNY', function () {
+    return view('FUNNY');
+});
+
+Route::get('/VIDEOS', function () {
+    return view('VIDEOS');
+});
+
+Route::get('/DONT MISS', function () {
+    return view('DONT MISS');
+});
+
+Route::get('/MEGA MENU', function () {
+    return view('MEGA MENU');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -22,3 +42,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+

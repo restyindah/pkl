@@ -61,7 +61,7 @@
                     <nav class="classy-navbar justify-content-between" id="viralnewsNav">
 
                         <!-- Logo -->
-                        <a class="nav-brand" href="index.html"><img src="img/core-img/logo.png" alt="Logo"></a>
+                        <a class="nav-brand" href="index.html"><img src="{{ asset/frontend/img/core-img/logo.png')}}" alt="Logo"></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -182,7 +182,7 @@
                 <!-- Add Widget -->
                 <div class="col-12 col-md-8">
                     <div class="add-widget">
-                        <a href="#"><img src="img/bg-img/add2.png" alt=""></a>
+                        <a href="#"><img src="{{ asset('assets/frontend/img/bg-img/add2.png')}}" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -286,7 +286,7 @@
                             <div class="single-blog-post style-4">
                                 <!-- Post Thumb -->
                                 <div class="post-thumb">
-                                    <a href="#"><img src="img/bg-img/15.jpg" alt=""></a>
+                                    <a href="#"><img src="{{ asset/frontend/img/bg-img/15.jpg')}}" alt=""></a>
                                     <span class="serial-number">01.</span>
                                 </div>
                                 <!-- Post Data -->
@@ -304,7 +304,7 @@
                             <div class="single-blog-post style-4">
                                 <!-- Post Thumb -->
                                 <div class="post-thumb">
-                                    <a href="#"><img src="img/bg-img/16.jpg" alt=""></a>
+                                    <a href="#"><img src="{{ asset/frontend/img/bg-img/16.jpg')}}" alt=""></a>
                                     <span class="serial-number">02.</span>
                                 </div>
                                 <!-- Post Data -->
@@ -322,7 +322,7 @@
                             <div class="single-blog-post style-4">
                                 <!-- Post Thumb -->
                                 <div class="post-thumb">
-                                    <a href="#"><img src="img/bg-img/17.jpg" alt=""></a>
+                                    <a href="#"><img src="{{ asset/frontend/img/bg-img/17.jpg')}}" alt=""></a>
                                     <span class="serial-number">03.</span>
                                 </div>
                                 <!-- Post Data -->
@@ -340,7 +340,7 @@
 
                         <!-- Add Widget -->
                         <div class="add-widget">
-                            <a href="#"><img src="img/bg-img/add.png" alt=""></a>
+                            <a href="#"><img src="{{ asset/frontend/img/bg-img/add.png')}}" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -362,7 +362,7 @@
                         <div class="footer-widget-area">
                             <!-- Footer Logo -->
                             <div class="footer-logo">
-                                <a href="index.html"><img src="img/core-img/logo.png" alt=""></a>
+                                <a href="index.html"><img src="{{ asset/frontend/img/core-img/logo.png')}}" alt=""></a>
                             </div>
                             <!-- Footer Nav -->
                             <div class="footer-nav">
@@ -405,7 +405,7 @@
                             <!-- Single Latest Post -->
                             <div class="single-blog-post style-2 d-flex align-items-center">
                                 <div class="post-thumb">
-                                    <a href="#"><img src="img/bg-img/4.jpg" alt=""></a>
+                                    <a href="#"><img src="{{ asset/frontend/img/bg-img/4.jpg')}}" alt=""></a>
                                 </div>
                                 <div class="post-data">
                                     <a href="#" class="post-title">
@@ -420,7 +420,7 @@
                             <!-- Single Latest Post -->
                             <div class="single-blog-post style-2 d-flex align-items-center">
                                 <div class="post-thumb">
-                                    <a href="#"><img src="img/bg-img/5.jpg" alt=""></a>
+                                    <a href="#"><img src="{{ asset/frontend/img/bg-img/5.jpg')}}" alt=""></a>
                                 </div>
                                 <div class="post-data">
                                     <a href="#" class="post-title">
@@ -435,7 +435,7 @@
                             <!-- Single Latest Post -->
                             <div class="single-blog-post style-2 d-flex align-items-center">
                                 <div class="post-thumb">
-                                    <a href="#"><img src="img/bg-img/6.jpg" alt=""></a>
+                                    <a href="#"><img src="{{ asset/frontend/img/bg-img/6.jpg')}}" alt=""></a>
                                 </div>
                                 <div class="post-data">
                                     <a href="#" class="post-title">

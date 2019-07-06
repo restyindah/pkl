@@ -12,10 +12,10 @@
     <title>Viral Story - Viral News Magazine Template</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="icon" href="{{('assets/frontend/img/core-img/favicon.ico')}}">
 
     <!-- Core Stylesheet -->
-    <link rel="stylesheet" href="{{asset('frontend/style.css')}}">
+    <link rel="stylesheet" href="{{('assets/frontend/style.css')}}">
 
 </head>
 
@@ -61,7 +61,7 @@
                     <nav class="classy-navbar justify-content-between" id="viralnewsNav">
 
                         <!-- Logo -->
-                        <a class="nav-brand" href="index.html"><img src="{{ asset('assets/frontend/img/core-img/logo.png')}}" alt="Logo"></a>
+                        <a class="nav-brand" href="index.html"><img src="{{asset('assets/frontend/img/core-img/logo.png')}}" alt="Logo"></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -82,18 +82,18 @@
                                     <li class="active"><a href="catagory.html">Top 10</a></li>
                                     <li><a href="#">Pages</a>
                                         <ul class="dropdown">
-                                            <li><a href="/">Home</a></li>
-                                            <li><a href="catagory.html">Catagories</a></li>
-                                            <li><a href="single-post.html">     ticle</a></li>
+                                            <li><a href="{{url('/')}}">Home</a></li>
+                                            <li><a href="{{url('category')}}">Catagories</a></li>
+                                            <li><a href="single-post.html">Single Article</a></li>
                                             <li><a href="quize-article.html">Quize Article</a></li>
-                                            <li><a href="/contact">Contact</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
                                             <li><a href="#">Dropdown</a>
                                                 <ul class="dropdown">
-                                                    <li><a href="/">Home</a></li>
+                                                    <li><a href="index.html">Home</a></li>
                                                     <li><a href="catagory.html">Catagories</a></li>
                                                     <li><a href="single-post.html">Single Article</a></li>
                                                     <li><a href="quize-article.html">Quize Article</a></li>
-                                                    <li><a href="/contact">Contact</a></li>
+                                                    <li><a href="contact.html">Contact</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -163,163 +163,64 @@
     </header>
     <!-- ##### Header Area End ##### -->
 
-    <!-- ##### Hero Area Start ##### -->
-    <div class="hero-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="hero-slides owl-carousel">
-                        <!-- Single Blog Post -->
-                        <div class="single-blog-post d-flex align-items-center mb-50">
-                            <div class="post-thumb">
-                                <a href="#"><img src="{{ asset('assets/frontend/img/bg-img/1.jpg')}}" alt=""></a>
-                            </div>
-                            <div class="post-data">
-                                <a href="#" class="post-title">
-                                    <h6>Man Rescued Injured Bird, And Now He Probably Wishes He Hadn’t</h6>
-                                </a>
-                                <div class="post-meta">
-                                    <p class="post-date"><a href="#">2 Days Ago</a></p>
-                                </div>
-                            </div>
-                        </div>
+    <!-- ##### Viral News Breadcumb Area Start ##### -->
+    <div class="viral-news-breadcumb-area section-padding-50">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
 
-                        <!-- Single Blog Post -->
-                        <div class="single-blog-post d-flex align-items-center mb-50">
-                            <div class="post-thumb">
-                                <a href="#"><img src="{{ asset('assets/frontend/img/bg-img/2.jpg')}}" alt=""></a>
-                            </div>
-                            <div class="post-data">
-                                <a href="#" class="post-title">
-                                    <h6>This 76-year-old Grandmother Lives Alone In Siberia And Skates</h6>
-                                </a>
-                                <div class="post-meta">
-                                    <p class="post-date"><a href="#">3 Days Ago</a></p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Blog Post -->
-                        <div class="single-blog-post d-flex align-items-center mb-50">
-                            <div class="post-thumb">
-                                <a href="#"><img src="{{ asset('assets/frontend/img/bg-img/3.jpg')}}" alt=""></a>
-                            </div>
-                            <div class="post-data">
-                                <a href="#" class="post-title">
-                                    <h6>Mother Saves Her Daughter During A Talent Show, And Now Everyone Is Crying</h6>
-                                </a>
-                                <div class="post-meta">
-                                    <p class="post-date"><a href="#">2 Days Ago</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Breadcumb Area -->
+                <div class="col-12 col-md-4">
+                    <h3>Trending</h3>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Trending</li>
+                        </ol>
+                    </nav>
                 </div>
 
-            </div>
-        </div>
-    </div>
-    <!-- ##### Hero Area End ##### -->
-
-    <!-- ##### Welcome Slide Area Start ##### -->
-    <div class="welcome-slide-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="welcome-slides owl-carousel">
-
-                        <!-- Single Welcome Slide -->
-                        <div class="single-welcome-slide">
-                            <div class="row no-gutters">
-                                <div class="col-12 col-lg-8">
-                                    <!-- Welcome Post -->
-                                    <div class="welcome-post">
-                                        <img src="{{ asset('assets/frontend/img/bg-img/bg1.jpg')}}" alt="">
-                                        <div class="post-content" data-animation="fadeInUp" data-duration="500ms">
-                                            <a href="#" class="tag">Travel</a>
-                                            <a href="#" class="post-title">10 Tips to travel in style for less</a>
-                                            <p>1 day ago</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-lg-4">
-                                    <div class="welcome-posts--">
-                                        <!-- Welcome Post -->
-                                        <div class="welcome-post style-2">
-                                            <img src="{{ asset('assets/frontend/img/bg-img/bg2.jpg')}}" alt="">
-                                            <div class="post-content" data-animation="fadeInUp" data-delay="500ms" data-duration="500ms">
-                                                <a href="#" class="tag tag-2">Celebs</a>
-                                                <a href="#" class="post-title">Superstar spoted with new boyfriend</a>
-                                                <p>1 day ago</p>
-                                            </div>
-                                        </div>
-
-                                        <!-- Welcome Post -->
-                                        <div class="welcome-post style-2">
-                                            <img src="{{ asset('assets/frontend/img/bg-img/bg3.jpg')}}" alt="">
-                                            <div class="post-content" data-animation="fadeInUp" data-delay="750ms" data-duration="500ms">
-                                                <a href="#" class="tag tag-3">4 Fun</a>
-                                                <a href="#" class="post-title">Festival looks for all the party people</a>
-                                                <p>1 day ago</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <!-- Single Welcome Slide -->
-                        <div class="single-welcome-slide">
-                            <div class="row no-gutters">
-                                <div class="col-12 col-lg-8">
-                                    <!-- Welcome Post -->
-                                    <div class="welcome-post">
-                                        <img src="{{ asset('assets/frontend/img/bg-img/bg1.jpg')}}" alt="">
-                                        <div class="post-content" data-animation="fadeInUp" data-duration="500ms">
-                                            <a href="#" class="tag">Travel</a>
-                                            <a href="#" class="post-title">10 Tips to travel in style for less</a>
-                                            <p>1 day ago</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-lg-4">
-                                    <div class="welcome-posts--">
-                                        <!-- Welcome Post -->
-                                        <div class="welcome-post style-2">
-                                            <img src="{{ asset('assets/frontend/img/bg-img/bg2.jpg')}}" alt="">
-                                            <div class="post-content" data-animation="fadeInUp" data-delay="500ms" data-duration="500ms">
-                                                <a href="#" class="tag tag-2">Celebs</a>
-                                                <a href="#" class="post-title">Superstar spoted with new boyfriend</a>
-                                                <p>1 day ago</p>
-                                            </div>
-                                        </div>
-
-                                        <!-- Welcome Post -->
-                                        <div class="welcome-post style-2">
-                                            <img src="{{ asset('assets/frontend/img/bg-img/bg3.jpg')}}" alt="">
-                                            <div class="post-content" data-animation="fadeInUp" data-delay="750ms" data-duration="500ms">
-                                                <a href="#" class="tag tag-3">4 Fun</a>
-                                                <a href="#" class="post-title">Festival looks for all the party people</a>
-                                                <p>1 day ago</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                <!-- Add Widget -->
+                <div class="col-12 col-md-8">
+                    <div class="add-widget">
+                        <a href="#"><img src="{{asset('assets/frontend/img/bg-img/add2.png')}}" alt=""></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- ##### Welcome Slide Area End ##### -->
+    <!-- ##### Viral News Breadcumb Area End ##### -->
 
     <!-- ##### Blog Post Area Start ##### -->
     <div class="viral-story-blog-post section-padding-0-50">
+
+        <!-- Catagory Featured Post -->
+        <div class="catagory-featured-post section-padding-100">
+            <div class="container">
+                <div class="row">
+                    <!-- Catagory Thumbnail -->
+                    <div class="col-12 col-md-7">
+                        <div class="cata-thumbnail">
+                            <a href="#"><img src="{{asset('assets/frontend/img/bg-img/18.jpg')}}" alt=""></a>
+                        </div>
+                    </div>
+                    <!-- Catagory Content -->
+                    <div class="col-12 col-md-5">
+                        <div class="cata-content">
+                            <a href="#" class="post-catagory">Finance</a>
+                            <a href="#">
+                                <h2>This Is How Notebooks Of An Artist Who Travels Around The World Look Like</h2>
+                            </a>
+                            <div class="post-meta">
+                                <p class="post-author">By <a href="#">Michael Smithson</a></p>
+                                <p class="post-date">5 Hours Ago</p>
+                            </div>
+                            <p class="post-excerp">Donec turpis erat, scelerisque id sit amet, fermentum vel dolor. Nulla facilisi. Sed lectus et accumsan aliquam. Fusce lobortis cursus quam, id mattis sapien...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="container">
             <div class="row">
                 <!-- Blog Posts Area -->
@@ -331,7 +232,7 @@
                             <div class="single-blog-post style-3">
                                 <!-- Post Thumb -->
                                 <div class="post-thumb">
-                                    <a href="#"><img src="{{ asset('assets/frontend/img/bg-img/7.jpg')}}" alt=""></a>
+                                    <a href="#"><img src="{{asset('assets/frontend/img/bg-img/7.jpg')}}" alt=""></a>
                                 </div>
                                 <!-- Post Data -->
                                 <div class="post-data">
@@ -352,7 +253,7 @@
                             <div class="single-blog-post style-3">
                                 <!-- Post Thumb -->
                                 <div class="post-thumb">
-                                    <a href="#"><img src="{{ asset('assets/frontend/img/bg-img/8.jpg')}}" alt=""></a>
+                                    <a href="#"><img src="{{asset('assets/frontend/img/bg-img/8.jpg')}}" alt=""></a>
                                 </div>
                                 <!-- Post Data -->
                                 <div class="post-data">
@@ -373,7 +274,7 @@
                             <div class="single-blog-post style-3">
                                 <!-- Post Thumb -->
                                 <div class="post-thumb">
-                                    <a href="#"><img src="{{ asset('assets/frontend/img/bg-img/9.jpg')}}" alt=""></a>
+                                    <a href="#"><img src="{{asset('assets/frontend/img/bg-img/9.jpg')}}" alt=""></a>
                                 </div>
                                 <!-- Post Data -->
                                 <div class="post-data">
@@ -394,7 +295,7 @@
                             <div class="single-blog-post style-3">
                                 <!-- Post Thumb -->
                                 <div class="post-thumb">
-                                    <a href="#"><img src="{{ asset('assets/frontend/img/bg-img/10.jpg')}}" alt=""></a>
+                                    <a href="#"><img src="{{asset('assets/frontend/img/bg-img/10.jpg')}}" alt=""></a>
                                 </div>
                                 <!-- Post Data -->
                                 <div class="post-data">
@@ -415,7 +316,7 @@
                             <div class="single-blog-post style-3">
                                 <!-- Post Thumb -->
                                 <div class="post-thumb">
-                                    <a href="#"><img src="{{ asset('assets/frontend/img/bg-img/11.jpg')}}" alt=""></a>
+                                    <a href="#"><img src="{{asset('assets/frontend/img/bg-img/11.jpg')}}" alt=""></a>
                                 </div>
                                 <!-- Post Data -->
                                 <div class="post-data">
@@ -436,7 +337,7 @@
                             <div class="single-blog-post style-3">
                                 <!-- Post Thumb -->
                                 <div class="post-thumb">
-                                    <a href="#"><img src="{{ asset('assets/frontend/img/bg-img/12.jpg')}}" alt=""></a>
+                                    <a href="#"><img src="{{asset('assets/frontend/img/bg-img/12.jpg')}}" alt=""></a>
                                 </div>
                                 <!-- Post Data -->
                                 <div class="post-data">
@@ -457,7 +358,7 @@
                             <div class="single-blog-post style-3">
                                 <!-- Post Thumb -->
                                 <div class="post-thumb">
-                                    <a href="#"><img src="{{ asset('assets/frontend/img/bg-img/13.jpg')}}" alt=""></a>
+                                    <a href="#"><img src="{{asset('assets/frontend/img/bg-img/13.jpg')}}" alt=""></a>
                                 </div>
                                 <!-- Post Data -->
                                 <div class="post-data">
@@ -478,7 +379,7 @@
                             <div class="single-blog-post style-3">
                                 <!-- Post Thumb -->
                                 <div class="post-thumb">
-                                    <a href="#"><img src="{{ asset('assets/frontend/img/bg-img/14.jpg')}}" alt=""></a>
+                                    <a href="#"><img src="{{asset('assets/frontend/img/bg-img/14.jpg')}}" alt=""></a>
                                 </div>
                                 <!-- Post Data -->
                                 <div class="post-data">
@@ -539,7 +440,7 @@
                             <div class="single-blog-post style-4">
                                 <!-- Post Thumb -->
                                 <div class="post-thumb">
-                                    <a href="#"><img src="{{ asset('assets/frontend/img/bg-img/15.jpg')}}" alt=""></a>
+                                    <a href="#"><img src="{{asset('assets/frontend/img/bg-img/15.jpg')}}" alt=""></a>
                                     <span class="serial-number">01.</span>
                                 </div>
                                 <!-- Post Data -->
@@ -557,7 +458,7 @@
                             <div class="single-blog-post style-4">
                                 <!-- Post Thumb -->
                                 <div class="post-thumb">
-                                    <a href="#"><img src="{{ asset('assets/frontend/img/bg-img/16.jpg')}}" alt=""></a>
+                                    <a href="#"><img src="{{asset('assets/frontend/img/bg-img/16.jpg')}}" alt=""></a>
                                     <span class="serial-number">02.</span>
                                 </div>
                                 <!-- Post Data -->
@@ -575,7 +476,7 @@
                             <div class="single-blog-post style-4">
                                 <!-- Post Thumb -->
                                 <div class="post-thumb">
-                                    <a href="#"><img src="{{ asset('assets/frontend/img/bg-img/17.jpg')}}" alt=""></a>
+                                    <a href="#"><img src="{{asset('assets/frontend/img/bg-img/17.jpg')}}" alt=""></a>
                                     <span class="serial-number">03.</span>
                                 </div>
                                 <!-- Post Data -->
@@ -593,7 +494,7 @@
 
                         <!-- Add Widget -->
                         <div class="add-widget mb-70">
-                            <a href="#"><img src="{{ asset('assets/frontend/img/bg-img/add.png')}}" alt=""></a>
+                            <a href="#"><img src="{{asset('assets/frontend/img/bg-img/add.png')}}" alt=""></a>
                         </div>
 
                         <!-- Latest Comments -->
@@ -603,7 +504,7 @@
                             <!-- Single Comment Widget -->
                             <div class="single-comments d-flex">
                                 <div class="comments-thumbnail">
-                                    <img src="{{ asset('assets/frontend/img/bg-img/t1.jpg')}}" alt="">
+                                    <img src="{{asset('assets/frontend/img/bg-img/t1.jpg')}}" alt="">
                                 </div>
                                 <div class="comments-text">
                                     <a href="#"><span>Jamie Smith</span> on Facebook is offering facial recognition...</a>
@@ -614,7 +515,7 @@
                             <!-- Single Comment Widget -->
                             <div class="single-comments d-flex">
                                 <div class="comments-thumbnail">
-                                    <img src="{{ asset('assets/frontend/img/bg-img/t2.jpg')}}" alt="">
+                                    <img src="{{asset('assets/frontend/img/bg-img/t2.jpg')}}" alt="">
                                 </div>
                                 <div class="comments-text">
                                     <a href="#"><span>Tania Heffner</span> on Facebook is offering facial recognition...</a>
@@ -625,7 +526,7 @@
                             <!-- Single Comment Widget -->
                             <div class="single-comments d-flex">
                                 <div class="comments-thumbnail">
-                                    <img src="{{ asset('assets/frontend/img/bg-img/t3.jpg')}}" alt="">
+                                    <img src="{{asset('assets/frontend/img/bg-img/t3.jpg')}}" alt="">
                                 </div>
                                 <div class="comments-text">
                                     <a href="#"><span>Sandy Doe</span> on Facebook is offering facial recognition...</a>
@@ -654,7 +555,7 @@
                         <div class="footer-widget-area">
                             <!-- Footer Logo -->
                             <div class="footer-logo">
-                                <a href="index.html"><img src="{{ asset('assets/frontend/img/core-img/logo.png')}}" alt=""></a>
+                                <a href="index.html"><img src="{{asset('assets/frontend/img/core-img/logo.png')}}" alt=""></a>
                             </div>
                             <!-- Footer Nav -->
                             <div class="footer-nav">
@@ -697,7 +598,7 @@
                             <!-- Single Latest Post -->
                             <div class="single-blog-post style-2 d-flex align-items-center">
                                 <div class="post-thumb">
-                                    <a href="#"><img src="{{ asset('assets/frontend/img/bg-img/4.jpg')}}" alt=""></a>
+                                    <a href="#"><img src="{{asset('assets/frontend/img/bg-img/4.jpg')}}" alt=""></a>
                                 </div>
                                 <div class="post-data">
                                     <a href="#" class="post-title">
@@ -712,7 +613,7 @@
                             <!-- Single Latest Post -->
                             <div class="single-blog-post style-2 d-flex align-items-center">
                                 <div class="post-thumb">
-                                    <a href="#"><img src="{{ asset('assets/frontend/img/bg-img/5.jpg')}}" alt=""></a>
+                                    <a href="#"><img src="{{asset('assets/frontend/img/bg-img/5.jpg')}}" alt=""></a>
                                 </div>
                                 <div class="post-data">
                                     <a href="#" class="post-title">
@@ -727,7 +628,7 @@
                             <!-- Single Latest Post -->
                             <div class="single-blog-post style-2 d-flex align-items-center">
                                 <div class="post-thumb">
-                                    <a href="#"><img src="{{ asset('assets/frontend/img/bg-img/6.jpg')}}" alt=""></a>
+                                    <a href="#"><img src="{{asset('assets/frontend/img/bg-img/6.jpg')}}" alt=""></a>
                                 </div>
                                 <div class="post-data">
                                     <a href="#" class="post-title">
@@ -763,15 +664,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
     <!-- ##### All Javascript Files ##### -->
     <!-- jQuery-2.2.4 js -->
-    <script src="{{ asset('assets/frontend/js/jquery/jquery-2.2.4.min.js')}}"></script>
+    <script src="{{asset('assets/frontend/js/jquery/jquery-2.2.4.min.js')}}"></script>
     <!-- Popper js -->
-    <script src="{{ asset('assets/frontend/js/bootstrap/popper.min.js')}}"></script>
+    <script src="{{asset('assets/frontend/js/bootstrap/popper.min.js')}}"></script>
     <!-- Bootstrap js -->
-    <script src="{{ asset('assets/frontend/js/bootstrap/bootstrap.min.js')}}"></script>
+    <script src="{{asset('assets/frontend/js/bootstrap/bootstrap.min.js')}}"></script>
     <!-- All Plugins js -->
-    <script src="{{ asset('assets/frontend/js/plugins/plugins.js')}}"></script>
+    <script src="{{asset('assets/frontend/js/plugins/plugins.js')}}"></script>
     <!-- Active js -->
-    <script src="{{ asset('assets/frontend/js/active.js')}}"></script>
+    <script src="{{asset('assets/frontend/js/active.js')}}"></script>
 </body>
 
 </html>

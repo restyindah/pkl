@@ -12,7 +12,7 @@
     <title>Viral Story - Viral News Magazine Template</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="icon" href="{{('assets/frontend/img/core-img/favicon.ico')}} ">
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="{{('assets/frontend/style.css')}}">
@@ -80,10 +80,10 @@
                             <div class="classynav">
                                 <ul>
                                     <li class="active"><a href="catagory.html">Top 10</a></li>
-                                    <li><a href="#">Pages</a>
+                                    <li><a href="{{url('category')}}">Pages</a>
                                         <ul class="dropdown">
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="catagory.html">Catagories</a></li>
+                                            <li><a href="{{url('/')}}">Home</a></li>
+                                            <li><a href="{{url('category')}}">Catagories</a></li>
                                             <li><a href="single-post.html">Single Article</a></li>
                                             <li><a href="quize-article.html">Quize Article</a></li>
                                             <li><a href="contact.html">Contact</a></li>
@@ -98,10 +98,10 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li><a href="index.html">Funny</a></li>
-                                    <li><a href="index.html">Videos</a></li>
-                                    <li><a href="index.html">Don’t Miss</a></li>
-                                    <li><a href="#">Mega Menu</a>
+                                    <li><a href="{{url('/')}}">Funny</a></li>
+                                    <li><a href="{{url('/')}}">Videos</a></li>
+                                    <li><a href="{{url('/')}}">Don’t Miss</a></li>
+                                    <li><a href="{{url('/')}}">Mega Menu</a>
                                         <div class="megamenu">
                                             <ul class="single-mega cn-col-4">
                                                 <li><a href="index.html">Home</a></li>
@@ -763,15 +763,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
     <!-- ##### All Javascript Files ##### -->
     <!-- jQuery-2.2.4 js -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="{{('assets/frontend/js/jquery/jquery-2.2.4.min.js')}}"></script>
     <!-- Popper js -->
-    <script src="js/bootstrap/popper.min.js"></script>
+    <script src="{{('assets/frontend/js/bootstrap/popper.min.js')}}"></script>
     <!-- Bootstrap js -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="{{('assets/frontend/js/bootstrap/bootstrap.min.js')}}"></script>
     <!-- All Plugins js -->
-    <script src="js/plugins/plugins.js"></script>
+    <script src="{{('assets/frontend/js/plugins/plugins.js')}}"></script>
     <!-- Active js -->
-    <script src="js/active.js"></script>
+    <script src="{{('assets/frontend/js/active.js')}}"></script>
 </body>
 
 </html>
