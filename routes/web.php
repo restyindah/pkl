@@ -35,6 +35,13 @@ Route::get('/MEGA MENU', function () {
     return view('MEGA MENU');
 });
 
+Route::get('/admin',function() {
+    return view('welcome');
+});
+Route::resource('/admin/artikel','ArtikelController'); 
+Route::resource('/admin/kategori','KategoriController'); 
+Route::resource('/admin/tag','TagController'); 
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
