@@ -26,8 +26,6 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                  </a>
-                 <a class="navbar-brand" href="{{ url('/admin/artikel') }}"></a>
-
                  <a class="navbar-brand" href="{{ url('/admin/artikel') }}">Artikel</a>
                  <a class="navbar-brand" href="{{ url('/admin/kategori') }}">Kategori</a>
                  <a class="navbar-brand" href="{{ url('/admin/tag') }}">Tag</a>
