@@ -96,12 +96,13 @@ class TagController extends Controller
     public function show($id)
     {
         $tag = Tag::find($id);
-        $response = [
+        if(!$tag) {
+            $response = [
             'succes' => false,
             'data' => 'Empety',
             'message' => 'Tag tidak ditemukan.'
         ];
-        return response()->json($response, 400);
+        return response()->json($response, 404);
     }
 
        $response = [
@@ -111,6 +112,8 @@ class TagController extends Controller
        ];
 
        return response()->json($response, 200);
+    
+    }
 
     /**
      * Show the form for editing the specified resource.
@@ -175,6 +178,23 @@ class TagController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $tag = Tag::find($Id);
+        if(!$tag){
+            $response = [
+                'succes' => false,
+                'data' => 'Gagal menghapus.',
+                'message' => 'Tag tidak ditemukan'
+            ];
+            return response()->json($response, 404);
+        }
+
+        $tag->delete();
+        $response = [
+            'succes' => true,
+            'data' => $tag,
+            'message' => 'Tag berhasil dihapus'
+        ];
+
+        return response()->json($response, 200);
     }
 }

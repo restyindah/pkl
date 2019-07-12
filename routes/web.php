@@ -43,7 +43,7 @@ function () {
     Route::get('/admin', function () {
         return view('backend.index');
     });
-    route::resource('kategori','KategoriController');
+    route::resource('kategori','kategoriController');
     route::resource('tag','TagController');
     route::resource('artikel','ArtikelController');
 });
@@ -58,4 +58,7 @@ Route::get('/siswa',function() {
 });
 
 
+Route::get('/Kategori',function() {
+    return view('kategori');
+});
 
