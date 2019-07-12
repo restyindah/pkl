@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Tag;
+use App\Kategori;
 
-class TagController extends Controller
+class KategoriController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,12 +15,12 @@ class TagController extends Controller
      */
     public function index()
     {
-        $tag = Tag::all();
-        if (!$tag) {
+        $kategori = Kategori::all();
+        if (!$kategori) {
             $response = [
                 'succes' => false,
                 'data' => 'Empety',
-                'message' => 'Tag tidak ditemukan.'
+                'message' => 'Kategori tidak ditemukan.'
             ];
             return response()->json($response,404);
         }
@@ -72,13 +72,13 @@ class TagController extends Controller
 
         // 4. buat fungsi untuk menghandle semua inputan ->
         // dimasukan ke table
-        $tag = Tag::create($input);
+        $kategori = Kategori::create($input);
 
         // 5. menampilkan response
         $response = [
             'succes' => true,
-            'data' => $tag,
-            'message' => 'Tag berhasil ditemukan.'
+            'data' => $kategori,
+            'message' => 'Kategori berhasil ditemukan.'
         ];
 
         // 6. tampilkan hasil
@@ -96,24 +96,23 @@ class TagController extends Controller
      */
     public function show($id)
     {
-        $tag = Tag::find($id);
-        if(!$tag) {
+        $kategori = Kategori::find($id);
+        if(!$kategori) {
             $response = [
             'succes' => false,
             'data' => 'Empety',
-            'message' => 'Tag tidak ditemukan.'
+            'message' => 'Kategori tidak ditemukan.'
         ];
         return response()->json($response, 404);
     }
 
        $response = [
         'succes' => true,
-        'data' => $tag,
+        'data' => $kategori,
         'message' => 'Berhasil'
        ];
 
        return response()->json($response, 200);
-    
     }
 
     /**
@@ -136,14 +135,14 @@ class TagController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $tag = Tag::find($id);
+       $kategori = Kategori::find($id);
         $input = $request->all();
 
-        if (!tag) {
+        if (!kategori) {
             $response = [
                 'succes' => false,
                 'data' => 'Empety',
-                'message' => 'Tag tidak ditemukan.'
+                'message' => 'Kategori tidak ditemukan.'
             ];
             return response()->json($response, 400);
         }
@@ -160,13 +159,13 @@ class TagController extends Controller
             return response()->json($response, 500);
         }
 
-        $tag->nama = $input['nama'];
-        $tag->save();
+       $kategori->nama = $input['nama'];
+       $kategori->save();
 
         $response = [
             'succes' => true,
-            'data' => $tag,
-            'message' => 'Tag berhasil diupdate'
+            'data' =>$kategori,
+            'message' => 'Kategori berhasil diupdate'
         ];
         return response()->json($response,200);
     }
@@ -179,23 +178,24 @@ class TagController extends Controller
      */
     public function destroy($id)
     {
-        $tag = Tag::find($Id);
-        if(!$tag){
+        $kategori = Kategori::find($Id);
+        if(!$kategori){
             $response = [
                 'succes' => false,
                 'data' => 'Gagal menghapus.',
-                'message' => 'Tag tidak ditemukan'
+                'message' => 'Kategori tidak ditemukan'
             ];
             return response()->json($response, 404);
         }
 
-        $tag->delete();
+        $kategori->delete();
         $response = [
             'succes' => true,
-            'data' => $tag,
-            'message' => 'Tag berhasil dihapus'
+            'data' => $kategori,
+            'message' => 'Kategori berhasil dihapus'
         ];
 
         return response()->json($response, 200);
     }
+    
 }

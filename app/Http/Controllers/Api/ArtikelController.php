@@ -4,9 +4,10 @@ namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Tag;
+use App\Artikel;
 
-class TagController extends Controller
+
+class ArtikelController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,12 +16,12 @@ class TagController extends Controller
      */
     public function index()
     {
-        $tag = Tag::all();
-        if (!$tag) {
+        $artikel = Artikel::all();
+        if (!$artikel) {
             $response = [
                 'succes' => false,
                 'data' => 'Empety',
-                'message' => 'Tag tidak ditemukan.'
+                'message' => 'Artikel tidak ditemukan.'
             ];
             return response()->json($response,404);
         }
@@ -52,40 +53,40 @@ class TagController extends Controller
      */
     public function store(Request $request)
     {
-        // 1. tampung semua inputan ke $input;
-        $input = $request->all();
+          // 1. tampung semua inputan ke $input;
+          $input = $request->all();
 
-        // 2. buat validasi ditampung ke $validor
-        $validor = Validator::make($input,[
-            'nama' => 'required|min:15'
-        ]);
-
-        // 3. Chek validasi
-        if ($validator->fails()) {
-            $response = [
-                'succes' => false,
-                'data' => 'Validation Eror.',
-                'message' => $validator->erors()
-            ];
-            return response()->json($response, 500);
-        }
-
-        // 4. buat fungsi untuk menghandle semua inputan ->
-        // dimasukan ke table
-        $tag = Tag::create($input);
-
-        // 5. menampilkan response
-        $response = [
-            'succes' => true,
-            'data' => $tag,
-            'message' => 'Tag berhasil ditemukan.'
-        ];
-
-        // 6. tampilkan hasil
-        return response()->json($response, 200);
-
-        // 7. menmapilkan error di heroku :
-        // heroku config::set APP_DEBUG=true
+          // 2. buat validasi ditampung ke $validor
+          $validor = Validator::make($input,[
+              'nama' => 'required|min:15'
+          ]);
+  
+          // 3. Chek validasi
+          if ($validator->fails()) {
+              $response = [
+                  'succes' => false,
+                  'data' => 'Validation Eror.',
+                  'message' => $validator->erors()
+              ];
+              return response()->json($response, 500);
+          }
+  
+          // 4. buat fungsi untuk menghandle semua inputan ->
+          // dimasukan ke table
+          $artikel = Artikel::create($input);
+  
+          // 5. menampilkan response
+          $response = [
+              'succes' => true,
+              'data' => $artikel,
+              'message' => 'Artikel berhasil ditemukan.'
+          ];
+  
+          // 6. tampilkan hasil
+          return response()->json($response, 200);
+  
+          // 7. menmapilkan error di heroku :
+          // heroku config::set APP_DEBUG=true
     }
 
     /**
@@ -96,24 +97,23 @@ class TagController extends Controller
      */
     public function show($id)
     {
-        $tag = Tag::find($id);
-        if(!$tag) {
+        $artikel = Artikel::find($id);
+        if(!$artikel) {
             $response = [
             'succes' => false,
             'data' => 'Empety',
-            'message' => 'Tag tidak ditemukan.'
+            'message' => 'Artikel tidak ditemukan.'
         ];
         return response()->json($response, 404);
     }
 
        $response = [
         'succes' => true,
-        'data' => $tag,
+        'data' => $artikel,
         'message' => 'Berhasil'
        ];
 
        return response()->json($response, 200);
-    
     }
 
     /**
@@ -136,14 +136,14 @@ class TagController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $tag = Tag::find($id);
+        $artikel = Artikel::find($id);
         $input = $request->all();
 
-        if (!tag) {
+        if (!artikel) {
             $response = [
                 'succes' => false,
                 'data' => 'Empety',
-                'message' => 'Tag tidak ditemukan.'
+                'message' => 'Artikel tidak ditemukan.'
             ];
             return response()->json($response, 400);
         }
@@ -160,13 +160,13 @@ class TagController extends Controller
             return response()->json($response, 500);
         }
 
-        $tag->nama = $input['nama'];
-        $tag->save();
+        $artikel->nama = $input['nama'];
+        $artikel->save();
 
         $response = [
             'succes' => true,
-            'data' => $tag,
-            'message' => 'Tag berhasil diupdate'
+            'data' => $artikel,
+            'message' => 'Artikel berhasil diupdate'
         ];
         return response()->json($response,200);
     }
@@ -179,23 +179,25 @@ class TagController extends Controller
      */
     public function destroy($id)
     {
-        $tag = Tag::find($Id);
-        if(!$tag){
+        
+        $artikel = Artikel::find($Id);
+        if(!$artikel){
             $response = [
                 'succes' => false,
                 'data' => 'Gagal menghapus.',
-                'message' => 'Tag tidak ditemukan'
+                'message' => 'Artikel tidak ditemukan'
             ];
             return response()->json($response, 404);
         }
 
-        $tag->delete();
+        $artikel->delete();
         $response = [
             'succes' => true,
-            'data' => $tag,
-            'message' => 'Tag berhasil dihapus'
+            'data' => $artikel,
+            'message' => 'Artikel berhasil dihapus'
         ];
 
         return response()->json($response, 200);
     }
-}
+    }
+
