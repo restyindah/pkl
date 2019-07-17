@@ -69,8 +69,8 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
-    public function showRegistrationForm()
-    {
-        return view('erors.404');
-    }
+     // public function showRegistrationForm()
+   // {
+       // return view('erors.404');
+   // }
 }

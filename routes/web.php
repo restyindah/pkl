@@ -62,3 +62,11 @@ Route::get('/Kategori',function() {
     return view('kategori');
 });
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
